@@ -1,0 +1,28 @@
+Assuming user has ocaml and opam installed, 
+navigate to the Downloads/src directory (or whatever directory the code is downloaded to) 
+and type 
+
+make play 
+
+within terminal to start the game.
+
+to drop a card, type [drop card_name] as displayed as in your deck. 
+For example "drop Green 1", "drop Wild Card Draw 4"
+
+to choose a color, type in [color color_name] , first letter needs to be uppercase.
+For example "color Red"
+
+You can't stack with a free card. For the Free Card, you can choose any nonspecial
+card, or a special card that matches the special ability or color of the current card.  
+First, write "drop Free Card" then, the program will prompt you to choose a card.  
+You must type "card card_name",for example "card Red 1"
+
+To swap hands, you can drop the Wild Card Swap Hands card using the drop terminology 
+above.  Then, the program will ask you who you want to swap with, and what 
+color you want to change to.  You must type "player number color_name".
+For example, "player 2 Red"
+
+If you choose to add a computer player, the computer player will be represented
+as Player 5, no matter how many players you have.  So, if you have 2 human
+players and add a computer player, it will cycle 1,2,5 if the direction is 
+ascending.  

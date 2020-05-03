@@ -1,0 +1,10 @@
+At first, our LOCs were extremely high, as we used pattern matching based on 
+the current turn for returning states for the game action.  We realized that
+we could make this more efficient by ommiting the pattern matching in Gamestate
+and making helper methods (cycle and cycle skip) to move on to the correct 
+players based on direction and current turn, and to only apply the "card effect"
+to the correct players.  (For example, wild card draw 4 will take out one wild
+card draw 4 from the current player, add 4 cards to the next player's deck by 
+using cycle to determine the next player, and skipping to the next next player's 
+turn, by using cycle skip).  Although this reduced our LOCs, we believe this 
+made our code a lot more efficient and less repetitve.  
